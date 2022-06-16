@@ -62,10 +62,7 @@ Function Write-SidesOfSquare() {
 
     for($i = 0; $i -le $VerticalLength; $i++) {
         for([int]$j = 0; $j -le $HorizontalLength; $j++) {
-            if($j -eq 0) {
-                Write-Host ("{0}" -f ([Convert]::ToChar($verticalLine))) -NoNewline;
-            }
-            elseif($j -eq $HorizontalLength) {
+            if($j -eq 0 -or $j -eq $HorizontalLength) {
                 Write-Host ("{0}" -f ([Convert]::ToChar($verticalLine))) -NoNewline;
             }
             else {
